@@ -1,4 +1,5 @@
 import numpy as np
+from tensorflow.keras.datasets import mnist
 
 # Layers
 class NeuralNetwork():
@@ -153,10 +154,6 @@ class NeuralNetwork():
             self.w_list[i] -= self.weight_grad[i] * self.lr
             self.b_list[i] -= self.bias_grad[i] * self.lr
 
-
-
-import numpy as np
-from tensorflow.keras.datasets import mnist
 
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
